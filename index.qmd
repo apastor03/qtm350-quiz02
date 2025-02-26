@@ -1,0 +1,7 @@
+---
+title: "Gapminder Data Analysis"
+---
+
+[Life Expectancy and GDP per Capita](life-gdp.qmd)  
+[Life Expectancy and Population](life-population.qmd)  
+[Country Analysis](country.qmd)

@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "life-population.html",
+    "href": "life-population.html",
+    "title": "Life Expectancy and Population",
+    "section": "",
+    "text": "This page analyzes how life expectancy varies with population size across different countries. Below is a chunk of R code that creates a graph that visualizes this relationship.\n\nlibrary(ggplot2)\ngapminder_data &lt;- read.csv(\"/Users/dafreir/Downloads/gapminder.csv\")\nggplot(gapminder_data, aes(x = population_millions, y = life_expectancy, color = continent)) + \n  geom_point() + \n  scale_x_log10() + \n  labs(title = \"Life Expectancy vs Population\", \n       x = \"Population (in millions, log scale)\", \n       y = \"Life Expectancy\")"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Gapminder Data Analysis",
+    "section": "",
+    "text": "Life Expectancy and GDP per Capita\nLife Expectancy and Population\nCountry Analysis"
+  },
+  {
+    "objectID": "country.html",
+    "href": "country.html",
+    "title": "Country Analysis",
+    "section": "",
+    "text": "This page examines the changes in life expectancy, GDP per capita, and population for a specific country over time. For example, let’s analyze Japan. Below is a chunk of R code that creates a graph that visualizes this relationship for Japan.\n\nlibrary(ggplot2)\ngapminder_data &lt;- read.csv(\"/Users/dafreir/Downloads/gapminder.csv\")\ncountry_data &lt;- gapminder_data[gapminder_data$country == \"Japan\", ]\nggplot(country_data, aes(x = year, y = life_expectancy)) + \n  geom_line() + \n  geom_point() + \n  labs(title = \"Life Expectancy in Japan over Time\", \n       x = \"Year\", y = \"Life Expectancy\")\n\n\n\n\n\n\n\nggplot(country_data, aes(x = year, y = gdp_per_capita)) + \n  geom_line() + \n  geom_point() + \n  labs(title = \"GDP per Capita in Japan over Time\", \n       x = \"Year\", y = \"GDP per Capita\")\n\n\n\n\n\n\n\nggplot(country_data, aes(x = year, y = population_millions)) + \n  geom_line() + \n  geom_point() + \n  labs(title = \"Population in Japan over Time\", \n       x = \"Year\", y = \"Population (millions)\")"
+  },
+  {
+    "objectID": "life-gdp.html",
+    "href": "life-gdp.html",
+    "title": "Life Expectancy and GDP per Capita",
+    "section": "",
+    "text": "This page explores the relationship between life expectancy and GDP per capita over time for various countries. Below is a chunk of R code that creates a graph that visualizes this relationship.\n\nlibrary(ggplot2)\ngapminder_data &lt;- read.csv(\"/Users/dafreir/Downloads/gapminder.csv\")\nggplot(gapminder_data, aes(x = gdp_per_capita, y = life_expectancy, color = continent)) + \n  geom_point() + \n  scale_x_log10() + \n  labs(title = \"Life Expectancy vs GDP per Capita\", \n       x = \"GDP per Capita (log scale)\", \n       y = \"Life Expectancy\")"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  }
+]

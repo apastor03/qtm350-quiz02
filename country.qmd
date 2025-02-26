@@ -1,0 +1,26 @@
+---
+title: "Country Analysis"
+---
+
+This page examines the changes in life expectancy, GDP per capita, and population for a specific country over time. For example, let’s analyze Japan. Below is a chunk of R code that creates a graph that visualizes this relationship for Japan.
+
+```{r}
+library(ggplot2)
+gapminder_data <- read.csv("/Users/dafreir/Downloads/gapminder.csv")
+country_data <- gapminder_data[gapminder_data$country == "Japan", ]
+ggplot(country_data, aes(x = year, y = life_expectancy)) + 
+  geom_line() + 
+  geom_point() + 
+  labs(title = "Life Expectancy in Japan over Time", 
+       x = "Year", y = "Life Expectancy")
+ggplot(country_data, aes(x = year, y = gdp_per_capita)) + 
+  geom_line() + 
+  geom_point() + 
+  labs(title = "GDP per Capita in Japan over Time", 
+       x = "Year", y = "GDP per Capita")
+ggplot(country_data, aes(x = year, y = population_millions)) + 
+  geom_line() + 
+  geom_point() + 
+  labs(title = "Population in Japan over Time", 
+       x = "Year", y = "Population (millions)")
+```
